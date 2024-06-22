@@ -11,6 +11,7 @@
     "href": "{{ $page.RelPermalink }}",
     "title": {{ (partial "docs/title" $page) | jsonify }},
     "section": {{ (partial "docs/title" $page.Parent) | jsonify }},
+    "tags": {{ (partial "docs/tags" $page.Parent) | jsonify }},
     "content": {{ $page.Plain | jsonify }}
 }
 {{- end -}}
